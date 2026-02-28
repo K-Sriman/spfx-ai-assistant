@@ -1,0 +1,68 @@
+                          ┌───────────────────────────┐
+                          │        👤 End User       │
+                          │  (SharePoint Web User)    │
+                          └─────────────┬─────────────┘
+                                        │
+                                        │  Natural Language Query
+                                        ▼
+                    ┌────────────────────────────────────┐
+                    │  SPFx React Frontend (Floating UI) │
+                    │  - ChatBox                         │
+                    │  - InputBox                        │
+                    │  - Message Component               │
+                    └─────────────┬──────────────────────┘
+                                  │
+                                  │  Auth via Azure AD
+                                  ▼
+                    ┌────────────────────────────────────┐
+                    │      Authentication Layer          │
+                    │      (Azure AD / M365 Identity)    │
+                    └─────────────┬──────────────────────┘
+                                  │
+                                  │  Access Token
+                                  ▼
+        ┌────────────────────────────────────────────────────────┐
+        │                🔁 Orchestration Layer                 │
+        │  - Query Analyzer                                      │
+        │  - Intent Detection                                    │
+        │  - Prompt Builder                                      │
+        │  - Permission Validator                                │
+        └─────────────┬───────────────────────────┬─────────────┘
+                      │                           │
+      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        (Dotted = Secured API Communication via HTTPS + OAuth)
+      - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+                      │                           │
+                      ▼                           ▼
+
+        ┌──────────────────────┐        ┌────────────────────────┐
+        │   Azure OpenAI       │        │   Microsoft Graph API  │
+        │   - NLP Processing   │        │   - Search Files       │
+        │   - Summarization    │        │   - User Profile       │
+        │   - Email Drafting   │        │   - Role Permissions   │
+        └──────────┬───────────┘        └──────────┬─────────────┘
+                   │                                │
+                   │                                │
+                   ▼                                ▼
+        ┌──────────────────────┐        ┌────────────────────────┐
+        │ Context Memory Layer │        │  SharePoint Online     │
+        │ - Conversation State │        │  - Documents           │
+        │ - Role Context       │        │  - Policies            │
+        │ - Session Cache      │        │  - SOPs                │
+        └──────────────────────┘        │  - Reports             │
+                                        └────────────────────────┘
+
+                         ▲
+                         │
+                         │ AI Generated Response
+                         │
+         ┌──────────────────────────────────────────────┐
+         │  Response Formatter                          │
+         │  - Clean Markdown                            │
+         │  - Highlighted Sections                      │
+         │  - Email Template Builder                    │
+         └──────────────────────────────────────────────┘
+                         │
+                         ▼
+                  👤 User Receives Answer
+
