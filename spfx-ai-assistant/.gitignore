@@ -1,0 +1,23 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# SPFx build output
+lib/
+dist/
+temp/
+sharepoint/solution/
+release/
+
+# IDE
+.vscode/.roaming
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local

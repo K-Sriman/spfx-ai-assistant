@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/extendedConfig.schema.json",
+  "id": "c5d7e9f1-a2b4-6c8d-0e2f-4a6b8c0d2e4f",
+  "alias": "AssistantApplicationCustomizer",
+  "componentType": "Extension",
+  "extensionType": "ApplicationCustomizer",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "safeWithCustomScript": false,
+  "loaderConfig": {
+    "entryModuleId": "AssistantApplicationCustomizer",
+    "internalModuleBaseUrls": [
+      "https://localhost:4321/"
+    ],
+    "scriptResources": {
+      "AssistantApplicationCustomizer": {
+        "type": "path",
+        "path": "dist/assistant-application-customizer.js"
+      },
+      "AssistantApplicationCustomizerStrings": {
+        "defaultPath": "dist/loc/en-us.js",
+        "type": "localized"
+      }
+    }
+  }
+}

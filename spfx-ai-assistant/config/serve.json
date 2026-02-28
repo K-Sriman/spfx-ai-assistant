@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://pravaltech.sharepoint.com/sites/DTDev/SitePages/LandingPage.aspx",
+      "customActions": {
+        "c5d7e9f1-a2b4-6c8d-0e2f-4a6b8c0d2e4f": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "AI Assistant loaded"
+          }
+        }
+      }
+    }
+  }
+}

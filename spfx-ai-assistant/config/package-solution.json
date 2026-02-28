@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-ai-assistant-client-side-solution",
+    "id": "a3b5c7d9-e1f2-4a6b-8c0d-2e4f6a8b0c2d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": false,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "SharePoint AI Assistant - context-aware, permission-sensitive"
+      },
+      "longDescription": {
+        "default": "An SPFx Application Customizer that embeds a context-aware AI assistant with Graph search, email actions, and knowledge retrieval."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "AI Assistant Application Customizer Feature",
+        "description": "Installs the AI Assistant Application Customizer",
+        "id": "b4c6d8e0-f2a3-5b7c-9d1e-3f5a7b9c1e3f",
+        "version": "1.0.0.0",
+        "componentIds": [
+          "c5d7e9f1-a2b4-6c8d-0e2f-4a6b8c0d2e4f"
+        ]
+      }
+    ],
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.Read"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.ReadBasic.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Mail.Send"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Sites.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Files.Read.All"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-ai-assistant.sppkg"
+  }
+}
